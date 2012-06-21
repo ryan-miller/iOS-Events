@@ -134,7 +134,9 @@ static NSString *kName_VenueName = @"venue_name";
 }
 
 - (void) parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    if (self.storeCharacters) [self.currentString appendString:string];
+    if (self.storeCharacters) {
+        [self.currentString appendString:string];
+    }
 }
 
 - (void) parser:(NSXMLParser *)parser 
